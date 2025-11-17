@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MAIN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/HEADER"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="-16dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:paddingTop="28dp"
+        android:background="@drawable/orange_round_rect"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:text="Calendar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BACK"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/back"
+        android:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="@+id/HEADER"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintHeight="wrap_content_constrained"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HEADER"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/CLASSES_HEADER"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Classes"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"/>
+
+                <Button
+                    android:id="@+id/ADD_CLASS"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="0dp"
+                    android:background="#00000000"
+                    android:drawableEnd="@drawable/add"
+                    android:text="Add"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#E8B100"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/CLASSES"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
+                android:dividerPadding="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                tools:ignore="UselessLeaf"> </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/EVENTS_HEADER"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Events"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"/>
+
+                <Button
+                    android:id="@+id/ADD_EVENT"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="0dp"
+                    android:background="#00000000"
+                    android:drawableEnd="@drawable/add"
+                    android:text="Add"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#E8B100"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/EVENTS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
+                android:dividerPadding="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                tools:ignore="UselessLeaf"> </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ASSIGNMENTS_HEADER"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Assignments"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"/>
+
+                <Button
+                    android:id="@+id/ADD_ASSIGNMENT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="0dp"
+                    android:background="#00000000"
+                    android:drawableEnd="@drawable/add"
+                    android:text="Add"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#E8B100"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ASSIGNMENTS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
+                android:dividerPadding="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                tools:ignore="UselessLeaf"> </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
